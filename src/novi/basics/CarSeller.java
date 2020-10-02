@@ -75,8 +75,10 @@ public class CarSeller {
                 "Website: " + website + '\'' + "\n" +
                 "VAT Number: " + vatNumber + '\'' + "\n";
 
-        for (Car car : this.cars) {
-            sellerData += car.toString();
+        if(cars.size() > 0) {
+            for (Car car : this.cars) {
+                sellerData += car.toString();
+            }
         }
 
         return sellerData;

@@ -61,7 +61,7 @@ public class Main {
         carList.add(new Car("1984", "citroën", "78-TD-99", 240356, 5600, Car.Type.HATCHBACK));
         carList.add(new Car("1981", "lada", "49-TM-19", 240356, 5600, Car.Type.CROSSOVER));
 
-        // add multiple cars in one go (method @Overwrite)
+        // add multiple cars in one go (method overloading)
         seller1.addCar(carList);
 
         // print seller data
