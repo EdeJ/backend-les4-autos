@@ -33,7 +33,7 @@ public class Main {
         System.out.println(seller1.toString());
 
         // create a car
-        Car car1 = new Car("1975", "beatle", "65-YH-45",123650, 4000, Car.Type.CABRIOLET);
+        Car car1 = new Car("1975", "beatle", "65-YH-45",123650, 4000, CarType.CABRIOLET);
 
         // print car data
         System.out.println(car1.toString());
@@ -58,8 +58,8 @@ public class Main {
 
         // create a list of cars
         List<Car> carList = new ArrayList<>();
-        carList.add(new Car("1984", "citroën", "78-TD-99", 240356, 5600, Car.Type.HATCHBACK));
-        carList.add(new Car("1981", "lada", "49-TM-19", 240356, 5600, Car.Type.CROSSOVER));
+        carList.add(new Car("1984", "citroën", "78-TD-99", 240356, 5600, CarType.HATCHBACK));
+        carList.add(new Car("1981", "lada", "49-TM-19", 240356, 5600, CarType.CROSSOVER));
 
         // add multiple cars in one go (method overloading)
         seller1.addCar(carList);

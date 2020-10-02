@@ -5,26 +5,21 @@ public class Car {
     String year;
     String Brand;
     String licensePlate;
+    CarType carType;
     int kilometers;
     double initialPrice;
     double sellingPrice;
-    enum Type {
-        HATCHBACK,
-        CABRIOLET,
-        SUV,
-        CROSSOVER,
-        SEDAN,
-        CONVERTABLE,
-        COUPE
-    }
 
-    public Car(String year, String brand, String licensePlate, int kilometers, double initialPrice, Type type) {
+
+    public Car(String year, String brand, String licensePlate, int kilometers, double initialPrice, CarType carType) {
         this.year = year;
         Brand = brand;
         this.licensePlate = licensePlate;
         this.kilometers = kilometers;
         this.initialPrice = initialPrice;
         this.sellingPrice = sellingPrice;
+        this.carType = carType;
+
     }
 
     public double askPriceVatInclusive() {
@@ -77,6 +72,7 @@ public class Car {
         return "\t\t---Car---" + "\n" +
                 "\t\tYear: " + year + "\n" +
                 "\t\tBrand: " + Brand + "\n" +
+                "\t\tCar type: " + carType + "\n" +
                 "\t\tLicense Plate: " + licensePlate + "\n" +
                 "\t\tKilometers: " + kilometers +"\n" +
                 "\t\tInitial Price: " + initialPrice +"\n" +
