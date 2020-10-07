@@ -17,14 +17,14 @@ public class Car {
         this.licensePlate = licensePlate;
         this.kilometers = kilometers;
         this.initialPrice = initialPrice;
-        this.sellingPrice = sellingPrice;
+        this.sellingPrice = sellingPrice; //BvS vergeten als parameter in de constructor? Gevolg: altijd 0
         this.carType = carType;
 
     }
 
     public double askPriceVatInclusive() {
         return this.initialPrice /100 *121;
-    }
+    }//BvS Ik zou die Vat rate apart in een variable zetten. Ik heb het zelf in een final static gezet
 
     public double sellPriceVatInclusive() {
         return this.sellingPrice /100 *121;
@@ -57,6 +57,8 @@ public class Car {
     public void setSellingPrice(double sellingPrice) {
         this.sellingPrice = sellingPrice;
     }
+
+    //BvS ha ha!
     public void dealCheck() {
         if(sellPriceVatInclusive() < askPriceVatInclusive()) {
             double difference = askPriceVatInclusive() - sellPriceVatInclusive();

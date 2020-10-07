@@ -27,7 +27,7 @@ public class Main {
         // add multiple phone numbers
         seller1.addPhoneNumber("0625489965");
         seller1.addPhoneNumber("0615659874");
-        System.out.println("\n");
+        System.out.println("\n");  //BvS ?
 
         // print seller data
         System.out.println(seller1.toString());
@@ -52,6 +52,12 @@ public class Main {
 
         // try to add the same car again
         seller1.addCar(car1);
+
+        /* BvS Het is niet meteen duidelijk dat je hier wilt uitprinten, ik zou het scheiden.
+            Bijv. in getCarCount() alleen het aantal cars terug geven en dan hier:
+            .println("Sold cars: "+seller1.getCarCount());
+
+        */
 
         // check the number of cars this seller has
         seller1.getCarCount();
