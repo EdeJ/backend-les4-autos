@@ -3,7 +3,7 @@ package novi.basics;
 public class Car {
 
     String year;
-    String Brand;
+    String brand;
     String licensePlate;
     CarType carType;
     int kilometers;
@@ -13,7 +13,7 @@ public class Car {
 
     public Car(String year, String brand, String licensePlate, int kilometers, double initialPrice, CarType carType) {
         this.year = year;
-        Brand = brand;
+        this.brand = brand;
         this.licensePlate = licensePlate;
         this.kilometers = kilometers;
         this.initialPrice = initialPrice;
@@ -35,7 +35,7 @@ public class Car {
     }
 
     public String getBrand() {
-        return Brand;
+        return brand;
     }
 
     public String getLicensePlate() {
@@ -71,7 +71,7 @@ public class Car {
     public String toString() {
         return "\t\t---Car---" + "\n" +
                 "\t\tYear: " + year + "\n" +
-                "\t\tBrand: " + Brand + "\n" +
+                "\t\tBrand: " + brand + "\n" +
                 "\t\tCar type: " + carType + "\n" +
                 "\t\tLicense Plate: " + licensePlate + "\n" +
                 "\t\tKilometers: " + kilometers +"\n" +
