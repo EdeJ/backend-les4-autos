@@ -3,7 +3,7 @@ package novi.basics;
 public class Car {
 
     String year;
-    String Brand;
+    String brand;
     String licensePlate;
     CarType carType;
     int kilometers;
@@ -13,18 +13,18 @@ public class Car {
 
     public Car(String year, String brand, String licensePlate, int kilometers, double initialPrice, CarType carType) {
         this.year = year;
-        Brand = brand;
+        this.brand = brand;
         this.licensePlate = licensePlate;
         this.kilometers = kilometers;
         this.initialPrice = initialPrice;
-        this.sellingPrice = sellingPrice;
+        this.sellingPrice = sellingPrice; //BvS vergeten als parameter in de constructor? Gevolg: altijd 0
         this.carType = carType;
 
     }
 
     public double askPriceVatInclusive() {
         return this.initialPrice /100 *121;
-    }
+    }//BvS Ik zou die Vat rate apart in een variable zetten. Ik heb het zelf in een final static gezet
 
     public double sellPriceVatInclusive() {
         return this.sellingPrice /100 *121;
@@ -35,7 +35,7 @@ public class Car {
     }
 
     public String getBrand() {
-        return Brand;
+        return brand;
     }
 
     public String getLicensePlate() {
@@ -57,6 +57,8 @@ public class Car {
     public void setSellingPrice(double sellingPrice) {
         this.sellingPrice = sellingPrice;
     }
+
+    //BvS ha ha!
     public void dealCheck() {
         if(sellPriceVatInclusive() < askPriceVatInclusive()) {
             double difference = askPriceVatInclusive() - sellPriceVatInclusive();
@@ -71,7 +73,7 @@ public class Car {
     public String toString() {
         return "\t\t---Car---" + "\n" +
                 "\t\tYear: " + year + "\n" +
-                "\t\tBrand: " + Brand + "\n" +
+                "\t\tBrand: " + brand + "\n" +
                 "\t\tCar type: " + carType + "\n" +
                 "\t\tLicense Plate: " + licensePlate + "\n" +
                 "\t\tKilometers: " + kilometers +"\n" +

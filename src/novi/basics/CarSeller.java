@@ -15,7 +15,7 @@ public class CarSeller {
 
     public CarSeller(String companyName, String website, String vatNumber) {
         this.companyName = companyName;
-        this.phoneNumbers = phoneNumbers;
+        this.phoneNumbers = phoneNumbers;//BvS vergeten als arg?
         this.website = website;
         this.vatNumber = vatNumber;
         this.cars = new ArrayList<>();
